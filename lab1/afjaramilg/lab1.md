@@ -2,8 +2,8 @@
 ## Andres Felipe Jaramillo 
 ### Creacion del cluster
 El primer paso fue crear el cluster en AWS.
-cluster-create1.png
-cluster-create2.png
+![alt text](cluster-create1.png)
+![alt text](cluster-create2.png)
 El cluster puede ser recreado con el comando
 
 ```
