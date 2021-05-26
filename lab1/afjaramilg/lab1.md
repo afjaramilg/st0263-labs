@@ -44,11 +44,11 @@ hadoop distcp /user/hadoop/st0263afjaramilg/hue-copy s3a://st0263afjaramilg-b2/d
 
 
 ### Ambari
-Despues de logearme en Ambari, cree dos carpetas dentro de /user/afjaramilg: ssh-copy y ambari-copy. En ambari-copy, manualmente cree las carpetas de los data sets y monte todos los archivos. 
+Despues de logearme en Ambari (https://hdpambari.dis.eafit.edu.co/), cree dos carpetas dentro de /user/afjaramilg: ssh-copy y ambari-copy. En ambari-copy, manualmente cree las carpetas de los data sets y monte todos los archivos. 
 
 ![alt text](ambariafjaramilg.png)
 
-Despues fui a la terminal ssh en linea y me logee con mi usuario. Corri los siguientes comandos:
+Despues fui a la terminal ssh en linea (https://hdpssh.dis.eafit.edu.co) y me logee con mi usuario. Corri los siguientes comandos:
 ```
 # clonar repo
 git clone https://github.com/st0263eafit/st026320211 
