@@ -1,0 +1,2139 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%python\nfrom pyspark.sql import SparkSession",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "Starting Spark application\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<table>\n<tr><th>ID</th><th>YARN Application ID</th><th>Kind</th><th>State</th><th>Spark UI</th><th>Driver log</th><th>Current session?</th></tr><tr><td>0</td><td>application_1622775260450_0003</td><td>pyspark</td><td>idle</td><td><a target=\"_blank\" href=\"http://ip-172-31-67-108.ec2.internal:20888/proxy/application_1622775260450_0003/\">Link</a></td><td><a target=\"_blank\" href=\"http://ip-172-31-66-118.ec2.internal:8042/node/containerlogs/container_1622775260450_0003_01_000001/livy\">Link</a></td><td>✔</td></tr></table>"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "SparkSession available as 'spark'.\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150738_-1129238284",
+      "id": "20210604-044910_371048358",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:6781"
+    },
+    {
+      "text": "%python\n#create spar session object\nspark=SparkSession.builder.appName('data_processing').getOrCreate()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_1900722054",
+      "id": "20210604-044910_721433434",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6782"
+    },
+    {
+      "text": "%python\n# Load csv Dataset \ndf=spark.read.csv('s3://lab3-afjaramilg/lab3-data/spark/sample_data.csv',inferSchema=True,header=True)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_1787312312",
+      "id": "20210604-044910_1897747891",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6783"
+    },
+    {
+      "text": "%python\nlen(df.columns)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "5"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_2036848903",
+      "id": "20210604-044910_1552550031",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6784"
+    },
+    {
+      "text": "%python\n#number of records in dataframe\ndf.count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "33"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_-1860364963",
+      "id": "20210604-044910_937790744",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6785"
+    },
+    {
+      "text": "%python\n#shape of dataset\nprint((df.count(),len(df.columns)))",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "(33, 5)"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_-1217209412",
+      "id": "20210604-044910_500560477",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6786"
+    },
+    {
+      "text": "%python\ndf.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "root\n |-- ratings: integer (nullable = true)\n |-- age: integer (nullable = true)\n |-- experience: double (nullable = true)\n |-- family: integer (nullable = true)\n |-- mobile: string (nullable = true)"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_1125446329",
+      "id": "20210604-044910_108960921",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6787"
+    },
+    {
+      "text": "%python\n#fisrt few rows of dataframe\ndf.show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+\n|ratings|age|experience|family| mobile|\n+-------+---+----------+------+-------+\n|      3| 32|       9.0|     3|   Vivo|\n|      3| 27|      13.0|     3|  Apple|\n|      4| 22|       2.5|     0|Samsung|\n|      4| 37|      16.5|     4|  Apple|\n|      5| 27|       9.0|     1|     MI|\n+-------+---+----------+------+-------+\nonly showing top 5 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_-1969583533",
+      "id": "20210604-044910_180105897",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6788"
+    },
+    {
+      "text": "%python\n#select only 2 columns\ndf.select('age','mobile').show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+---+-------+\n|age| mobile|\n+---+-------+\n| 32|   Vivo|\n| 27|  Apple|\n| 22|Samsung|\n| 37|  Apple|\n| 27|     MI|\n+---+-------+\nonly showing top 5 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_-759357470",
+      "id": "20210604-044910_288023467",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6789"
+    },
+    {
+      "text": "%python\ndf.describe().show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+------------------+------------------+------------------+------+\n|summary|           ratings|               age|        experience|            family|mobile|\n+-------+------------------+------------------+------------------+------------------+------+\n|  count|                33|                33|                33|                33|    33|\n|   mean|3.5757575757575757|30.484848484848484|10.303030303030303|1.8181818181818181|  null|\n| stddev|1.1188806636071336|  6.18527087180309| 6.770731351213326|1.8448330794164254|  null|\n|    min|                 1|                22|               2.5|                 0| Apple|\n|    max|                 5|                42|              23.0|                 5|  Vivo|\n+-------+------------------+------------------+------------------+------------------+------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150740_-618378515",
+      "id": "20210604-044910_593472713",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6790"
+    },
+    {
+      "text": "%python\nfrom pyspark.sql.types import StringType,DoubleType,IntegerType",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_679509722",
+      "id": "20210604-044910_1370977903",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6791"
+    },
+    {
+      "text": "%python\n#with column\ndf.withColumn(\"age_after_10_yrs\",(df[\"age\"]+10)).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+----------------+\n|ratings|age|experience|family|mobile |age_after_10_yrs|\n+-------+---+----------+------+-------+----------------+\n|3      |32 |9.0       |3     |Vivo   |42              |\n|3      |27 |13.0      |3     |Apple  |37              |\n|4      |22 |2.5       |0     |Samsung|32              |\n|4      |37 |16.5      |4     |Apple  |47              |\n|5      |27 |9.0       |1     |MI     |37              |\n|4      |27 |9.0       |0     |Oppo   |37              |\n|5      |37 |23.0      |5     |Vivo   |47              |\n|5      |37 |23.0      |5     |Samsung|47              |\n|3      |22 |2.5       |0     |Apple  |32              |\n|3      |27 |6.0       |0     |MI     |37              |\n+-------+---+----------+------+-------+----------------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-1154757620",
+      "id": "20210604-044910_989151114",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6792"
+    },
+    {
+      "text": "%python\ndf.withColumn('age_double',df['age'].cast(DoubleType())).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+----------+\n|ratings|age|experience|family|mobile |age_double|\n+-------+---+----------+------+-------+----------+\n|3      |32 |9.0       |3     |Vivo   |32.0      |\n|3      |27 |13.0      |3     |Apple  |27.0      |\n|4      |22 |2.5       |0     |Samsung|22.0      |\n|4      |37 |16.5      |4     |Apple  |37.0      |\n|5      |27 |9.0       |1     |MI     |27.0      |\n|4      |27 |9.0       |0     |Oppo   |27.0      |\n|5      |37 |23.0      |5     |Vivo   |37.0      |\n|5      |37 |23.0      |5     |Samsung|37.0      |\n|3      |22 |2.5       |0     |Apple  |22.0      |\n|3      |27 |6.0       |0     |MI     |27.0      |\n+-------+---+----------+------+-------+----------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-371594660",
+      "id": "20210604-044910_2080679108",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6793"
+    },
+    {
+      "text": "%python\ndf.withColumn(\"age_after_10_yrs\",(df[\"age\"]+10)).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+----------------+\n|ratings|age|experience|family|mobile |age_after_10_yrs|\n+-------+---+----------+------+-------+----------------+\n|3      |32 |9.0       |3     |Vivo   |42              |\n|3      |27 |13.0      |3     |Apple  |37              |\n|4      |22 |2.5       |0     |Samsung|32              |\n|4      |37 |16.5      |4     |Apple  |47              |\n|5      |27 |9.0       |1     |MI     |37              |\n|4      |27 |9.0       |0     |Oppo   |37              |\n|5      |37 |23.0      |5     |Vivo   |47              |\n|5      |37 |23.0      |5     |Samsung|47              |\n|3      |22 |2.5       |0     |Apple  |32              |\n|3      |27 |6.0       |0     |MI     |37              |\n+-------+---+----------+------+-------+----------------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_607571645",
+      "id": "20210604-044910_576943721",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6794"
+    },
+    {
+      "text": "%python\ndf.filter(df['mobile']=='Vivo').show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+------+\n|ratings|age|experience|family|mobile|\n+-------+---+----------+------+------+\n|      3| 32|       9.0|     3|  Vivo|\n|      5| 37|      23.0|     5|  Vivo|\n|      4| 37|       6.0|     0|  Vivo|\n|      5| 37|      13.0|     1|  Vivo|\n|      4| 37|       6.0|     0|  Vivo|\n+-------+---+----------+------+------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_645021533",
+      "id": "20210604-044910_1208842308",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6795"
+    },
+    {
+      "text": "%python\ndf.filter(df['mobile']=='Vivo').select('age','ratings','mobile').show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+---+-------+------+\n|age|ratings|mobile|\n+---+-------+------+\n| 32|      3|  Vivo|\n| 37|      5|  Vivo|\n| 37|      4|  Vivo|\n| 37|      5|  Vivo|\n| 37|      4|  Vivo|\n+---+-------+------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-169266319",
+      "id": "20210604-044910_1528240032",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6796"
+    },
+    {
+      "text": "%python\ndf.filter(df['mobile']=='Vivo').filter(df['experience'] >10).show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+------+\n|ratings|age|experience|family|mobile|\n+-------+---+----------+------+------+\n|      5| 37|      23.0|     5|  Vivo|\n|      5| 37|      13.0|     1|  Vivo|\n+-------+---+----------+------+------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-1641407367",
+      "id": "20210604-044910_40680066",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6797"
+    },
+    {
+      "text": "%python\ndf.filter((df['mobile']=='Vivo')&(df['experience'] >10)).show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+------+\n|ratings|age|experience|family|mobile|\n+-------+---+----------+------+------+\n|      5| 37|      23.0|     5|  Vivo|\n|      5| 37|      13.0|     1|  Vivo|\n+-------+---+----------+------+------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-632751840",
+      "id": "20210604-044910_998593688",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6798"
+    },
+    {
+      "text": "%python\ndf.select('mobile').distinct().show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+\n| mobile|\n+-------+\n|Samsung|\n|     MI|\n|   Oppo|\n|  Apple|\n|   Vivo|\n+-------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_792026081",
+      "id": "20210604-044910_409584884",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6799"
+    },
+    {
+      "text": "%python\n#distinct value count\ndf.select('mobile').distinct().count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "5"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_-918905637",
+      "id": "20210604-044910_2065726030",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6800"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').count().show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+-----+\n|mobile |count|\n+-------+-----+\n|Samsung|6    |\n|MI     |8    |\n|Oppo   |7    |\n|Apple  |7    |\n|Vivo   |5    |\n+-------+-----+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150741_1196503913",
+      "id": "20210604-044910_486504194",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6801"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').count().orderBy('count',ascending=False).show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+-----+\n|mobile |count|\n+-------+-----+\n|MI     |8    |\n|Oppo   |7    |\n|Apple  |7    |\n|Samsung|6    |\n|Vivo   |5    |\n+-------+-----+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_-1408519982",
+      "id": "20210604-044910_231723409",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6802"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').mean().show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+------------------+------------------+------------------+\n|mobile |avg(ratings)      |avg(age)          |avg(experience)   |avg(family)       |\n+-------+------------------+------------------+------------------+------------------+\n|Samsung|4.166666666666667 |28.666666666666668|8.666666666666666 |1.8333333333333333|\n|MI     |3.5               |30.125            |10.1875           |1.375             |\n|Oppo   |2.857142857142857 |28.428571428571427|10.357142857142858|1.4285714285714286|\n|Apple  |3.4285714285714284|30.571428571428573|11.0              |2.7142857142857144|\n|Vivo   |4.2               |36.0              |11.4              |1.8               |\n+-------+------------------+------------------+------------------+------------------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_-1427511270",
+      "id": "20210604-044910_1540876984",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6803"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').sum().show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+------------+--------+---------------+-----------+\n|mobile |sum(ratings)|sum(age)|sum(experience)|sum(family)|\n+-------+------------+--------+---------------+-----------+\n|Samsung|25          |172     |52.0           |11         |\n|MI     |28          |241     |81.5           |11         |\n|Oppo   |20          |199     |72.5           |10         |\n|Apple  |24          |214     |77.0           |19         |\n|Vivo   |21          |180     |57.0           |9          |\n+-------+------------+--------+---------------+-----------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_11892285",
+      "id": "20210604-044910_601688454",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6804"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').max().show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+------------+--------+---------------+-----------+\n|mobile |max(ratings)|max(age)|max(experience)|max(family)|\n+-------+------------+--------+---------------+-----------+\n|Samsung|5           |37      |23.0           |5          |\n|MI     |5           |42      |23.0           |5          |\n|Oppo   |4           |42      |23.0           |2          |\n|Apple  |4           |37      |16.5           |5          |\n|Vivo   |5           |37      |23.0           |5          |\n+-------+------------+--------+---------------+-----------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_949818029",
+      "id": "20210604-044910_1157442968",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6805"
+    },
+    {
+      "text": "%python\ndf.groupBy('mobile').min().show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+------------+--------+---------------+-----------+\n|mobile |min(ratings)|min(age)|min(experience)|min(family)|\n+-------+------------+--------+---------------+-----------+\n|Samsung|2           |22      |2.5            |0          |\n|MI     |1           |27      |2.5            |0          |\n|Oppo   |2           |22      |6.0            |0          |\n|Apple  |3           |22      |2.5            |0          |\n|Vivo   |3           |32      |6.0            |0          |\n+-------+------------+--------+---------------+-----------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_-700214095",
+      "id": "20210604-044910_927809487",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6806"
+    },
+    {
+      "text": "%python\n#Aggregation\ndf.groupBy('mobile').agg({'experience':'sum'}).show(5,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---------------+\n|mobile |sum(experience)|\n+-------+---------------+\n|Samsung|52.0           |\n|MI     |81.5           |\n|Oppo   |72.5           |\n|Apple  |77.0           |\n|Vivo   |57.0           |\n+-------+---------------+"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_1907658710",
+      "id": "20210604-044910_1403748788",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6807"
+    },
+    {
+      "text": "%python\n# UDF\nfrom pyspark.sql.functions import udf",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_-1489694509",
+      "id": "20210604-044910_418460542",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6808"
+    },
+    {
+      "text": "%python\n#normal function \ndef price_range(brand):\n    if brand in ['Samsung','Apple']:\n        return 'High Price'\n    elif brand =='MI':\n        return 'Mid Price'\n    else:\n        return 'Low Price'",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_1574355782",
+      "id": "20210604-044910_902646805",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6809"
+    },
+    {
+      "text": "%python\n#create udf using python function\nbrand_udf=udf(price_range,StringType())\n#apply udf on dataframe\ndf.withColumn('price_range',brand_udf(df['mobile'])).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+-----------+\n|ratings|age|experience|family|mobile |price_range|\n+-------+---+----------+------+-------+-----------+\n|3      |32 |9.0       |3     |Vivo   |Low Price  |\n|3      |27 |13.0      |3     |Apple  |High Price |\n|4      |22 |2.5       |0     |Samsung|High Price |\n|4      |37 |16.5      |4     |Apple  |High Price |\n|5      |27 |9.0       |1     |MI     |Mid Price  |\n|4      |27 |9.0       |0     |Oppo   |Low Price  |\n|5      |37 |23.0      |5     |Vivo   |Low Price  |\n|5      |37 |23.0      |5     |Samsung|High Price |\n|3      |22 |2.5       |0     |Apple  |High Price |\n|3      |27 |6.0       |0     |MI     |Mid Price  |\n+-------+---+----------+------+-------+-----------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150742_1434351565",
+      "id": "20210604-044910_1805692452",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6810"
+    },
+    {
+      "text": "%python\n#using lambda function\nage_udf = udf(lambda age: \"young\" if age <= 30 else \"senior\", StringType())\n#apply udf on dataframe\ndf.withColumn(\"age_group\", age_udf(df.age)).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+---------+\n|ratings|age|experience|family|mobile |age_group|\n+-------+---+----------+------+-------+---------+\n|3      |32 |9.0       |3     |Vivo   |senior   |\n|3      |27 |13.0      |3     |Apple  |young    |\n|4      |22 |2.5       |0     |Samsung|young    |\n|4      |37 |16.5      |4     |Apple  |senior   |\n|5      |27 |9.0       |1     |MI     |young    |\n|4      |27 |9.0       |0     |Oppo   |young    |\n|5      |37 |23.0      |5     |Vivo   |senior   |\n|5      |37 |23.0      |5     |Samsung|senior   |\n|3      |22 |2.5       |0     |Apple  |young    |\n|3      |27 |6.0       |0     |MI     |young    |\n+-------+---+----------+------+-------+---------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-1583560982",
+      "id": "20210604-044910_1686709445",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6811"
+    },
+    {
+      "text": "%python\n#pandas udf\n#sc.list_packages()\n#sc.install_pypi_package(\"pandas==0.25.1\")\n#sc.install_pypi_package(\"pyarrow==0.15.1\")\n\nfrom pyspark.sql.functions import pandas_udf, PandasUDFType",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "Collecting pyarrow==0.15.1\n  Downloading https://files.pythonhosted.org/packages/2c/08/c3edfb14bf58af6d9b1d50e555232d82276ea9bbe4cb88dd491f137bc8d0/pyarrow-0.15.1-cp37-cp37m-manylinux1_x86_64.whl (59.0MB)\nRequirement already satisfied: numpy>=1.14 in /usr/local/lib64/python3.7/site-packages (from pyarrow==0.15.1)\nRequirement already satisfied: six>=1.0.0 in /usr/local/lib/python3.7/site-packages (from pyarrow==0.15.1)\nInstalling collected packages: pyarrow\nSuccessfully installed pyarrow-0.15.1"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_1558933157",
+      "id": "20210604-044910_1970442729",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6812"
+    },
+    {
+      "text": "%python\n#create python function\ndef remaining_yrs(age):\n    yrs_left=100-age\n\n    return yrs_left",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-8134326",
+      "id": "20210604-044910_704698038",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6813"
+    },
+    {
+      "text": "%python\n#create udf using python function\nlength_udf = pandas_udf(remaining_yrs, IntegerType())\n#apply pandas udf on dataframe\ndf.withColumn(\"yrs_left\", length_udf(df['age'])).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+--------+\n|ratings|age|experience|family|mobile |yrs_left|\n+-------+---+----------+------+-------+--------+\n|3      |32 |9.0       |3     |Vivo   |68      |\n|3      |27 |13.0      |3     |Apple  |73      |\n|4      |22 |2.5       |0     |Samsung|78      |\n|4      |37 |16.5      |4     |Apple  |63      |\n|5      |27 |9.0       |1     |MI     |73      |\n|4      |27 |9.0       |0     |Oppo   |73      |\n|5      |37 |23.0      |5     |Vivo   |63      |\n|5      |37 |23.0      |5     |Samsung|63      |\n|3      |22 |2.5       |0     |Apple  |78      |\n|3      |27 |6.0       |0     |MI     |73      |\n+-------+---+----------+------+-------+--------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_327466879",
+      "id": "20210604-044910_1153408092",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6814"
+    },
+    {
+      "text": "%python\n#udf using two columns \ndef prod(rating,exp):\n    x=rating*exp\n    return x",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-525783340",
+      "id": "20210604-044910_1774003970",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6815"
+    },
+    {
+      "text": "%python\n#create udf using python function\nprod_udf = pandas_udf(prod, DoubleType())\n#apply pandas udf on multiple columns of dataframe\ndf.withColumn(\"product\", prod_udf(df['ratings'],df['experience'])).show(10,False)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+-------+-------+\n|ratings|age|experience|family|mobile |product|\n+-------+---+----------+------+-------+-------+\n|3      |32 |9.0       |3     |Vivo   |27.0   |\n|3      |27 |13.0      |3     |Apple  |39.0   |\n|4      |22 |2.5       |0     |Samsung|10.0   |\n|4      |37 |16.5      |4     |Apple  |66.0   |\n|5      |27 |9.0       |1     |MI     |45.0   |\n|4      |27 |9.0       |0     |Oppo   |36.0   |\n|5      |37 |23.0      |5     |Vivo   |115.0  |\n|5      |37 |23.0      |5     |Samsung|115.0  |\n|3      |22 |2.5       |0     |Apple  |7.5    |\n|3      |27 |6.0       |0     |MI     |18.0   |\n+-------+---+----------+------+-------+-------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-2021578745",
+      "id": "20210604-044910_144772613",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6816"
+    },
+    {
+      "text": "%python\ndf.count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "33"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-1606790319",
+      "id": "20210604-044910_616090817",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6817"
+    },
+    {
+      "text": "%python\ndf=df.dropDuplicates()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150743_-567292087",
+      "id": "20210604-044910_484305270",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6818"
+    },
+    {
+      "text": "%python\ndf.count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "26"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_668976381",
+      "id": "20210604-044910_483940568",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6819"
+    },
+    {
+      "text": "%python\ndf_new=df.drop('mobile')",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_-1502132947",
+      "id": "20210604-044910_478788704",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6820"
+    },
+    {
+      "text": "%python\n\n\ndf_new.show(10)\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          },
+          {
+            "type": "TEXT",
+            "data": "+-------+---+----------+------+\n|ratings|age|experience|family|\n+-------+---+----------+------+\n|      4| 22|       2.5|     0|\n|      4| 22|       6.0|     1|\n|      3| 27|       6.0|     0|\n|      2| 32|      16.5|     2|\n|      4| 27|       9.0|     0|\n|      3| 37|      16.5|     5|\n|      4| 27|       6.0|     1|\n|      4| 37|       9.0|     2|\n|      3| 22|       2.5|     0|\n|      3| 32|       9.0|     3|\n+-------+---+----------+------+\nonly showing top 10 rows"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_-1305649192",
+      "id": "20210604-044910_2125833716",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6821"
+    },
+    {
+      "text": "%python\n#target directory \nwrite_uri='s3://lab3-afjaramilg/lab3-data/punto1/df_csv'",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_-720133415",
+      "id": "20210604-044910_231765261",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6822"
+    },
+    {
+      "text": "%python\n#save the dataframe as single csv \ndf.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_uri)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_130919806",
+      "id": "20210604-044910_1402008311",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6823"
+    },
+    {
+      "text": "%python\n#target location\nparquet_uri='s3://lab3-afjaramilg/lab3-data/punto1/df_parquet'",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_152652649",
+      "id": "20210604-044910_44772953",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6824"
+    },
+    {
+      "text": "%python\n#save the data into parquet format \ndf.write.format('parquet').save(parquet_uri)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T04:49:10+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "VBox()"
+          },
+          {
+            "type": "TEXT",
+            "data": "FloatProgress(value=0.0, bar_style='info', description='Progress:', layout=Layout(height='25px', width='50%'),…"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622782150744_-604392025",
+      "id": "20210604-044910_1365422589",
+      "dateCreated": "2021-06-04T04:49:10+0000",
+      "status": "READY",
+      "$$hashKey": "object:6825"
+    }
+  ],
+  "name": "PySpark",
+  "id": "2G9VCHVDU",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/PySpark"
+}

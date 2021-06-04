@@ -1,0 +1,1115 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "\n\n%pyspark\nfrom pyspark.sql import SparkSession",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:33+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810288_721216718",
+      "id": "20210604-033650_1708745169",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:33+0000",
+      "dateFinished": "2021-06-04T03:58:33+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:252"
+    },
+    {
+      "text": "\n\n%pyspark\nspark=SparkSession.builder.appName('lab3-punto2').getOrCreate()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:33+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810288_957752699",
+      "id": "20210604-033650_208048531",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:33+0000",
+      "dateFinished": "2021-06-04T03:58:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:253"
+    },
+    {
+      "text": "\n\n%pyspark\ndf=spark.read.csv('s3://lab3-afjaramilg/lab3-data/spark/Casos_positivos_de_COVID-19_en_Colombia.csv',inferSchema=True,header=True)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:33+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=137",
+              "$$hashKey": "object:951"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=138",
+              "$$hashKey": "object:952"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810288_-143289390",
+      "id": "20210604-033650_580894247",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:33+0000",
+      "dateFinished": "2021-06-04T03:58:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:254"
+    },
+    {
+      "text": "\n\n%pyspark\n# 2.1\n# nombres de columnas\nprint(df.columns,\"NUM\", len(df.columns))",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:33+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "['ID de caso', 'Fecha de notificación', 'Codigo DIVIPOLA', 'Ciudad de ubicación', 'Departamento o Distrito ', 'atención', 'Edad', 'Sexo', 'Tipo', 'Estado', 'País de procedencia', 'FIS', 'Fecha de muerte', 'Fecha diagnostico', 'Fecha recuperado', 'fecha reporte web'] NUM 16\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810288_1980377588",
+      "id": "20210604-033650_81373903",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:33+0000",
+      "dateFinished": "2021-06-04T03:58:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:255"
+    },
+    {
+      "text": "\n\n%pyspark\n# numero de registros\ndf.count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:33+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "6211\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=139",
+              "$$hashKey": "object:1042"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=140",
+              "$$hashKey": "object:1043"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810289_700667918",
+      "id": "20210604-033650_1175275077",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:33+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:256"
+    },
+    {
+      "text": "\n\n%pyspark\n# 2.2\n# tipos de datos\ndf.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- ID de caso: integer (nullable = true)\n |-- Fecha de notificación: timestamp (nullable = true)\n |-- Codigo DIVIPOLA: integer (nullable = true)\n |-- Ciudad de ubicación: string (nullable = true)\n |-- Departamento o Distrito : string (nullable = true)\n |-- atención: string (nullable = true)\n |-- Edad: integer (nullable = true)\n |-- Sexo: string (nullable = true)\n |-- Tipo: string (nullable = true)\n |-- Estado: string (nullable = true)\n |-- País de procedencia: string (nullable = true)\n |-- FIS: string (nullable = true)\n |-- Fecha de muerte: string (nullable = true)\n |-- Fecha diagnostico: timestamp (nullable = true)\n |-- Fecha recuperado: string (nullable = true)\n |-- fecha reporte web: timestamp (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810289_-596777080",
+      "id": "20210604-033650_2120199454",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:257"
+    },
+    {
+      "text": "\n\n%pyspark\n# 2.3\ndf.select('Sexo','FIS').show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+--------------------+\n|Sexo|                 FIS|\n+----+--------------------+\n|   F|2020-02-27T00:00:...|\n|   M|2020-03-04T00:00:...|\n|   F|2020-02-29T00:00:...|\n|   M|2020-03-06T00:00:...|\n|   M|2020-03-08T00:00:...|\n+----+--------------------+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=141",
+              "$$hashKey": "object:1133"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810289_375337179",
+      "id": "20210604-033650_560880244",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:258"
+    },
+    {
+      "text": "\n\n%pyspark\nfrom pyspark.sql.functions import lit, when",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810289_-718349330",
+      "id": "20210604-033650_1747456836",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:259"
+    },
+    {
+      "text": "\n\n%pyspark\n#2.4\n#agregar columna\ndf2=df.withColumn(\"columna1\", when(df['Sexo'] == 'M', lit('A')).otherwise(lit('B')))\ndf2.select('Sexo', 'columna1').show(5)\n\n# nombres de columnas\nprint(\"----------\")\nprint(df2.columns,\"NUM\", len(df2.columns))",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+--------+\n|Sexo|columna1|\n+----+--------+\n|   F|       B|\n|   M|       A|\n|   F|       B|\n|   M|       A|\n|   M|       A|\n+----+--------+\nonly showing top 5 rows\n\n----------\n['ID de caso', 'Fecha de notificación', 'Codigo DIVIPOLA', 'Ciudad de ubicación', 'Departamento o Distrito ', 'atención', 'Edad', 'Sexo', 'Tipo', 'Estado', 'País de procedencia', 'FIS', 'Fecha de muerte', 'Fecha diagnostico', 'Fecha recuperado', 'fecha reporte web', 'columna1'] NUM 17\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=142",
+              "$$hashKey": "object:1219"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810289_1584465568",
+      "id": "20210604-033650_1144737642",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:260"
+    },
+    {
+      "text": "\n\n%pyspark\n#2.5\n#borrar columna\ndf3=df.drop('Edad')\nprint(\"----------\")\nprint(df3.columns,\"NUM\", len(df3.columns))",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "----------\n['ID de caso', 'Fecha de notificación', 'Codigo DIVIPOLA', 'Ciudad de ubicación', 'Departamento o Distrito ', 'atención', 'Sexo', 'Tipo', 'Estado', 'País de procedencia', 'FIS', 'Fecha de muerte', 'Fecha diagnostico', 'Fecha recuperado', 'fecha reporte web'] NUM 15\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810290_-1015502518",
+      "id": "20210604-033650_1192177070",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:261"
+    },
+    {
+      "text": "\n\n%pyspark\n#2.6\n#filter\ndf4=df.filter(df['Sexo'] == 'M')\ndf4.show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:34+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+---------------------+---------------+-------------------+------------------------+----------+----+----+-----------+------+-------------------+--------------------+---------------+-------------------+--------------------+-------------------+\n|ID de caso|Fecha de notificación|Codigo DIVIPOLA|Ciudad de ubicación|Departamento o Distrito |  atención|Edad|Sexo|       Tipo|Estado|País de procedencia|                 FIS|Fecha de muerte|  Fecha diagnostico|    Fecha recuperado|  fecha reporte web|\n+----------+---------------------+---------------+-------------------+------------------------+----------+----+----+-----------+------+-------------------+--------------------+---------------+-------------------+--------------------+-------------------+\n|         2|  2020-03-06 00:00:00|          76111|Guadalajara de Buga|         Valle del Cauca|Recuperado|  34|   M|  Importado|  Leve|             España|2020-03-04T00:00:...|          -   -|2020-03-09 00:00:00|2020-03-19T00:00:...|2020-03-09 00:00:00|\n|         4|  2020-03-09 00:00:00|           5001|           Medellín|               Antioquia|Recuperado|  55|   M|Relacionado|  Leve|           Colombia|2020-03-06T00:00:...|          -   -|2020-03-11 00:00:00|2020-03-26T00:00:...|2020-03-11 00:00:00|\n|         5|  2020-03-09 00:00:00|           5001|           Medellín|               Antioquia|Recuperado|  25|   M|Relacionado|  Leve|           Colombia|2020-03-08T00:00:...|          -   -|2020-03-11 00:00:00|2020-03-23T00:00:...|2020-03-11 00:00:00|\n|        14|  2020-03-10 00:00:00|          76520|            Palmira|         Valle del Cauca|Recuperado|  48|   M|  Importado|  Leve|             España|2020-03-07T00:00:...|          -   -|2020-03-13 00:00:00|2020-03-21T00:00:...|2020-03-13 00:00:00|\n|        18|  2020-03-11 00:00:00|          11001|        Bogotá D.C.|             Bogotá D.C.|Recuperado|  54|   M|  Importado|  Leve|             España|2020-03-07T00:00:...|          -   -|2020-03-14 00:00:00|2020-04-07T00:00:...|2020-03-14 00:00:00|\n+----------+---------------------+---------------+-------------------+------------------------+----------+----+----+-----------+------+-------------------+--------------------+---------------+-------------------+--------------------+-------------------+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=143",
+              "$$hashKey": "object:1305"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810290_-524550060",
+      "id": "20210604-033650_341926593",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:34+0000",
+      "dateFinished": "2021-06-04T03:58:35+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:262"
+    },
+    {
+      "text": "\n\n%pyspark\nprint(df.select('País de procedencia').distinct().count())",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:35+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "42\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=144",
+              "$$hashKey": "object:1351"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=145",
+              "$$hashKey": "object:1352"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=146",
+              "$$hashKey": "object:1353"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810290_-1981758511",
+      "id": "20210604-033650_1023144250",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:35+0000",
+      "dateFinished": "2021-06-04T03:58:35+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:263"
+    },
+    {
+      "text": "\n\n%pyspark\n# UDF\nfrom pyspark.sql.functions import udf\nfrom pyspark.sql.types import StringType,DoubleType,IntegerType, BooleanType\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:35+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810290_1262688576",
+      "id": "20210604-033650_572897744",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:35+0000",
+      "dateFinished": "2021-06-04T03:58:35+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:264"
+    },
+    {
+      "text": "\n\n%pyspark\n# 2.7\ncolombiano_udf=udf(lambda p: True if p == \"Colombia\" else False, BooleanType())\ndf5=df.withColumn('colombiano', colombiano_udf(df['País de procedencia']))\ndf5.select('País de procedencia', 'colombiano').show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:35+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+----------+\n|País de procedencia|colombiano|\n+-------------------+----------+\n|             Italia|     false|\n|             España|     false|\n|             España|     false|\n|           Colombia|      true|\n|           Colombia|      true|\n+-------------------+----------+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=147",
+              "$$hashKey": "object:1447"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810290_-324586846",
+      "id": "20210604-033650_477725287",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:35+0000",
+      "dateFinished": "2021-06-04T03:58:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:265"
+    },
+    {
+      "text": "\n\n%pyspark\nwrite_url=\"s3://lab3-afjaramilg/lab3-data/punto3/\"",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:36+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810291_-1443690750",
+      "id": "20210604-033650_59874371",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:36+0000",
+      "dateFinished": "2021-06-04T03:58:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:266"
+    },
+    {
+      "text": "\n\n%pyspark\n#3.1\ndf31=df.groupBy('Departamento o Distrito ').count().orderBy('count',ascending=False)\ndf31.show(5,False)\ndf31.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_url + \"punto31\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:36+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------------------+-----+\n|Departamento o Distrito |count|\n+------------------------+-----+\n|Bogotá D.C.             |2543 |\n|Valle del Cauca         |877  |\n|Antioquia               |468  |\n|Meta                    |363  |\n|Cartagena D.T. y C.     |246  |\n+------------------------+-----+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=148",
+              "$$hashKey": "object:1533"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=149",
+              "$$hashKey": "object:1534"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=150",
+              "$$hashKey": "object:1535"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=151",
+              "$$hashKey": "object:1536"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=152",
+              "$$hashKey": "object:1537"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=153",
+              "$$hashKey": "object:1538"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810291_565612877",
+      "id": "20210604-033650_1619058474",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:36+0000",
+      "dateFinished": "2021-06-04T03:58:37+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:267"
+    },
+    {
+      "text": "\n\n%pyspark\n#3.2\ndf32=df.groupBy('Ciudad de ubicación').count().orderBy('count',ascending=False)\ndf32.show(5,False)\ndf32.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_url + \"punto32\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:37+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+-----+\n|Ciudad de ubicación|count|\n+-------------------+-----+\n|Bogotá D.C.        |2543 |\n|Cali               |713  |\n|Villavicencio      |344  |\n|Medellín           |305  |\n|Cartagena de Indias|246  |\n+-------------------+-----+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=154",
+              "$$hashKey": "object:1604"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=155",
+              "$$hashKey": "object:1605"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=156",
+              "$$hashKey": "object:1606"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=157",
+              "$$hashKey": "object:1607"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=158",
+              "$$hashKey": "object:1608"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=159",
+              "$$hashKey": "object:1609"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810291_644465509",
+      "id": "20210604-033650_1868829139",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:37+0000",
+      "dateFinished": "2021-06-04T03:58:38+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:268"
+    },
+    {
+      "text": "\n\n%pyspark\n#3.3\ndf33=df.groupBy('Fecha diagnostico').count().orderBy('count',ascending=False)\ndf33.show(5,False)\ndf33.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_url + \"punto33\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:38+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+-----+\n|Fecha diagnostico  |count|\n+-------------------+-----+\n|2020-04-28 00:00:00|356  |\n|2020-04-08 00:00:00|346  |\n|2020-04-24 00:00:00|321  |\n|2020-04-25 00:00:00|262  |\n|2020-04-29 00:00:00|259  |\n+-------------------+-----+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=160",
+              "$$hashKey": "object:1675"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=161",
+              "$$hashKey": "object:1676"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=162",
+              "$$hashKey": "object:1677"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=163",
+              "$$hashKey": "object:1678"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=164",
+              "$$hashKey": "object:1679"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=165",
+              "$$hashKey": "object:1680"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810291_255220583",
+      "id": "20210604-033650_1071570146",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:38+0000",
+      "dateFinished": "2021-06-04T03:58:39+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:269"
+    },
+    {
+      "text": "\n\n%pyspark\n#3.4\ndef grupos_edades(n):\n    if n < 20:\n        return \"Joven\"\n    elif n < 60:\n        return \"Adulto\"\n    else:\n        return \"Anciano\"\n\nedad_udf=udf(grupos_edades, StringType())\ndf34=df.withColumn('Grupo de Edad', edad_udf(df['Edad'])).groupBy('Grupo de Edad').count().orderBy('count',ascending=False)\ndf34.show(10)\ndf34.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_url + \"punto34\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:39+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+-----+\n|Grupo de Edad|count|\n+-------------+-----+\n|       Adulto| 4584|\n|      Anciano| 1074|\n|        Joven|  553|\n+-------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=166",
+              "$$hashKey": "object:1746"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=167",
+              "$$hashKey": "object:1747"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=168",
+              "$$hashKey": "object:1748"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=169",
+              "$$hashKey": "object:1749"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=170",
+              "$$hashKey": "object:1750"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=171",
+              "$$hashKey": "object:1751"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810291_-24343676",
+      "id": "20210604-033650_815934686",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:39+0000",
+      "dateFinished": "2021-06-04T03:58:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:270"
+    },
+    {
+      "text": "\n\n%pyspark\n# 3.5\n# como es la distribucion entre hombres y mujeres?\nsexo_udf=udf(lambda s: \"M\" if s == 'M' or s == 'm' else 'F', StringType()) \ndf35=df.withColumn('Sexo2', sexo_udf(df['Sexo'])).groupBy('Sexo2').count().orderBy('count',ascending=False)\ndf35.show(10)\ndf35.coalesce(1).write.format(\"csv\").option(\"header\",\"true\").save(write_url + \"punto35\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-06-04T03:58:40+0000",
+      "config": {
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----+\n|Sexo2|count|\n+-----+-----+\n|    M| 3291|\n|    F| 2920|\n+-----+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=172",
+              "$$hashKey": "object:1817"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=173",
+              "$$hashKey": "object:1818"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=174",
+              "$$hashKey": "object:1819"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=175",
+              "$$hashKey": "object:1820"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=176",
+              "$$hashKey": "object:1821"
+            },
+            {
+              "jobUrl": "http://ip-172-31-67-108.ec2.internal:4040/jobs/job?id=177",
+              "$$hashKey": "object:1822"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1622777810292_-950337255",
+      "id": "20210604-033650_1446894703",
+      "dateCreated": "2021-06-04T03:36:50+0000",
+      "dateStarted": "2021-06-04T03:58:40+0000",
+      "dateFinished": "2021-06-04T03:58:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:271"
+    }
+  ],
+  "name": "Note converted from Jupyter_2G9XZFSYC",
+  "id": "2G9BNKVXK",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/Note converted from Jupyter_2G9XZFSYC"
+}
